@@ -17,7 +17,8 @@ public class Cliente {
     @EqualsAndHashCode.Include
     private Long codigo;
     private String nome;
+    private String telefone;
     @OneToMany(mappedBy = "cliente")
     private List<EnderecoCliente> enderecos;
-    private String telefone;
+
 }

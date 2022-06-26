@@ -16,9 +16,11 @@ public class Empresa {
     @EqualsAndHashCode.Include
     private Long codigo;
     private String nome;
-    private String cnjp;
+    private String cnpj;
+    @Column(name = "razao_social")
     private String razaoSocial;
+    private String telefone;
     @Embedded
     private EnderecoEmpresa endereco;
-    private String telefone;
+
 }
