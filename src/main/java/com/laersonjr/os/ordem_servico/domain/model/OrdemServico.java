@@ -7,6 +7,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 @Getter
 @Setter
@@ -37,4 +38,7 @@ public class OrdemServico {
 
     @Enumerated(EnumType.STRING)
     private StatusOrdemServico status;
+
+    @OneToMany(mappedBy = "ordemServico")
+    private List<Acao> acoes;
 }
